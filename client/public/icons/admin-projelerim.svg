@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="46.489" height="46.489" viewBox="0 0 46.489 46.489">
+  <g id="Group_488" data-name="Group 488" transform="translate(-317 -148)">
+    <g id="vuesax-linear-blogger" transform="translate(329 160)">
+      <g id="vuesax-linear-blogger-2" data-name="vuesax-linear-blogger" transform="translate(-12 -12)">
+        <g id="blogger">
+          <path id="Vector" d="M25.668,39.489H13.821C3.949,39.489,0,35.54,0,25.668V13.821C0,3.949,3.949,0,13.821,0H25.668C35.54,0,39.489,3.949,39.489,13.821V25.668C39.489,35.54,35.54,39.489,25.668,39.489Z" transform="translate(3.5 3.5)" fill="#feee88"/>
+          <path id="BG_1" data-name="BG 1" d="M0,0H46.489V46.489H0Z" fill="none" opacity="0.58"/>
+          <path id="Vector-2" data-name="Vector" d="M0,0H46.489V46.489H0Z" fill="none" opacity="0"/>
+        </g>
+      </g>
+    </g>
+    <path id="Vector-3" data-name="Vector" d="M.03,6.4V19.132A5.629,5.629,0,0,0,6.4,25.5H19.132A5.629,5.629,0,0,0,25.5,19.132V12.765a2.006,2.006,0,0,0-2.122-2.122A2.006,2.006,0,0,1,21.254,8.52V6.4A5.629,5.629,0,0,0,14.887.03H6.4A5.629,5.629,0,0,0,.03,6.4Z" transform="translate(327.526 158.48)" fill="#eaaf01" stroke="#eaaf01" stroke-width="1.5"/>
+    <text id="_6" data-name="6" transform="translate(329 182)" fill="#fff" font-size="13" font-family="Inter-Black, Inter" font-weight="800"><tspan x="0" y="0">6</tspan></text>
+  </g>
+</svg>

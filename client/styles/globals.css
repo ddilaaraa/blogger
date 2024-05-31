@@ -1,0 +1,577 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --pb-green:#BEFAA0;
+  --pb-blue:#B5F5FA;
+  --pb-yellow:#FAEB37;
+  --pb-pink:#F1D6FF;
+}
+
+.mobile-short-content {
+  max-height: 3em; /* 3 satıra kadar içeriği sığacak şekilde ayarlayın */
+  overflow: hidden; /* Taşan içerikleri gizleyin */
+  text-overflow: ellipsis; /* Taşan içeriklerin sonuna üç nokta ekleyin */
+  /* Diğer stillendirme özellikleri buraya eklenebilir */
+}
+
+
+.loading-spin .ant-spin-dot i {
+  width: 35px;
+  height: 35px;
+  margin: 10px;
+}
+
+.ant-table-cell{
+  width: fit-content!important;
+}
+.tum-bloglar-tablo .ant-table-cell{
+  border-right: 1px solid #d8d8d8; /* Ant Design'ın varsayılan çizgi rengi */
+
+}
+
+.ant-table-cell-row-hover{
+  background-color: white!important;
+}
+
+.tum-bloglar-page .ant-dropdown-menu{
+  background-color: white!important;
+
+}
+.ant-dropdown-menu-item{
+  background-color: white!important;
+
+}
+
+ .ant-table-filter-dropdown {
+  background-color: white!important;
+
+}
+ .ant-btn-primary{
+  background: #1677ff!important;
+}
+
+.content-top label{
+  font-size: 19px!important;
+  
+  
+}
+.ant-col{
+  
+  max-width: 100%!important;
+  
+}
+
+
+.HayatimdanBloglarModal .ant-modal-content{
+  border-radius: 0px!important;
+  padding: 0px!important;
+  width: 100%;
+}
+
+
+
+ #admin-dropdown-container .ant-dropdown .ant-dropdown-menu{
+  background-color: black!important;
+  border-radius: 0px!important;
+  box-shadow: none!important;
+  
+}
+
+#admin-dropdown-container .ant-dropdown-menu-item-only-child:hover{
+  background-color: white!important;
+  color: black!important;
+}
+
+#admin-dropdown-container .ant-dropdown-menu-item{
+  background-color: black!important;
+  color: white!important;
+  border-radius: 0px!important;
+  
+}
+
+.highlighted {
+  position: relative;
+  display: inline;
+}
+@layer utilities {
+  @screen lg {
+    .black-and-white {
+      filter: grayscale(100%) brightness(80%) contrast(150%);
+      transition: filter 0.5s ease;    
+    }
+    .black-and-white:hover {
+      filter: none;
+    }
+  }
+  @screen xl {
+    
+    .genel-blog-title{
+      position: relative;
+      display: inline;
+    }
+    .genel-blog-title::after{
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 27%;
+      height: 0.25em; /* Çizginin kalınlığını ayarlayabilirsiniz */
+      width: 110%;
+      z-index: -1;
+      animation: highlightAnimation 1s cubic-bezier(0.73, 0, 0.08, 1) forwards; /* 2 saniyede tamamlanacak */
+      background: var(--pb-blue);
+    }
+
+    .teknik-blog-title{
+      position: relative;
+      display: inline;
+    }
+    .teknik-blog-title::after{
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 27%;
+      height: 0.25em; /* Çizginin kalınlığını ayarlayabilirsiniz */
+      width: 110%;
+      z-index: -1;
+      animation: highlightAnimation 1s cubic-bezier(0.73, 0, 0.08, 1) forwards; /* 2 saniyede tamamlanacak */
+      background: var(--pb-pink);
+    }
+  }
+}
+
+header{
+  animation:headerScaleHeightAnim 1s cubic-bezier(.2,.7,.64,1.1) forwards;
+  animation-delay: 0ms;
+  height: 0px;
+  
+}
+.Header2{
+  animation:headerScaleHeightAnim2 1s cubic-bezier(.2,.7,.64,1.1) forwards;
+  animation-delay: 0ms;
+  height: 0px;
+}
+.Header3{
+  animation:headerScaleHeightAnim3 1s cubic-bezier(.2,.7,.64,1.1) forwards;
+  animation-delay: 0ms;
+  height: 0px;
+}
+.site-big-desc{
+  animation:SlideLeftAnim 1s cubic-bezier(.2,.7,.64,1.1) forwards;
+  animation-delay: 500ms;
+  transform: translate(0px);
+  opacity: 0;
+}
+.site-big-title{
+  animation:SlideLeftAnim 1s cubic-bezier(.2,.7,.64,1.1) forwards;
+  animation-delay: 500ms;
+  transform: translate(0px);
+  opacity: 0;
+}
+.site-big-title-hr{
+  animation:HrAnim 1s cubic-bezier(.2,.7,.64,1.1) forwards;
+  animation-delay: 500ms;
+  height: 0px;
+}
+.header-profile-photo{
+  animation:ProfilePhotoScaleHeightAnim 1s cubic-bezier(.2,.7,.64,1.1) forwards;
+  animation-delay: 500ms;
+  height: 0px;
+  width: 0px;
+}
+#header-medium{
+  animation:SocialPhotoScaleHeightAnim 1s cubic-bezier(.2,.7,.64,1.1) forwards;
+  animation-delay: 500ms;
+  transform: scale(0);
+}
+
+.highlighted::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20%;
+  height: 0.25em; /* Çizginin kalınlığını ayarlayabilirsiniz */
+  width: 110%;
+  z-index: -1;
+  animation: highlightAnimation 1s cubic-bezier(0.73, 0, 0.08, 1) forwards; /* 2 saniyede tamamlanacak */
+
+}
+.ben-kimim-title{
+  position: relative;
+  display: inline;
+}
+.ben-kimim-title::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 27%;
+  height: 0.25em; /* Çizginin kalınlığını ayarlayabilirsiniz */
+  width: 110%;
+  z-index: -1;
+  animation: highlightAnimation 1s cubic-bezier(0.73, 0, 0.08, 1) forwards; /* 2 saniyede tamamlanacak */
+  background: var(--pb-yellow);
+}
+.genel-title{
+  position: relative;
+  display: inline;
+}
+.genel-title::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 27%;
+  height: 0.25em; /* Çizginin kalınlığını ayarlayabilirsiniz */
+  width: 110%;
+  z-index: -1;
+  animation: highlightAnimation 1s cubic-bezier(0.73, 0, 0.08, 1) forwards; /* 2 saniyede tamamlanacak */
+  background: var(--pb-blue);
+}
+
+.primary-menu div:nth-child(1) .highlighted::after{
+  background: var(--pb-yellow);
+}
+.primary-menu div:nth-child(2) .highlighted::after{
+  background: var(--pb-blue);
+}
+.primary-menu div:nth-child(3) .highlighted::after{
+  background: var(--pb-pink);
+}
+.primary-menu div:nth-child(4) .highlighted::after{
+  background: var(--pb-green);
+}
+
+.primary-menu div{
+  transition: all 2s ease-in-out;
+}
+.primary-menu div:nth-child(1){
+  animation:SlideLeftAnim 2s cubic-bezier(.2,.7,.64,1.1) forwards;
+  animation-delay: 400ms;
+  transform: translate(0px);
+  opacity: 0;
+}
+.primary-menu div:nth-child(2){
+  animation:SlideLeftAnim 2s cubic-bezier(.2,.7,.64,1.1) forwards;
+  animation-delay: 600ms;
+  transform: translate(0px);
+  opacity: 0;
+}
+.primary-menu div:nth-child(3){
+  animation:SlideLeftAnim 2s cubic-bezier(.2,.7,.64,1.1) forwards;
+  animation-delay: 800ms;
+  transform: translate(0px);
+  opacity: 0;
+}
+.primary-menu div:nth-child(4){
+  animation:SlideLeftAnim 2s cubic-bezier(.2,.7,.64,1.1) forwards;
+  animation-delay: 1000ms;
+  transform: translate(0px);
+  opacity: 0;
+
+}
+
+
+.hayatimdan-bloglar , .hikayem , .vizyonum-misyonum , .teknik-bloglar , .hayatimdan-bloglar-blog, .teknik-bloglarim-blog{
+  animation:HayatimdanBloglarAnim 2s cubic-bezier(.2,.7,.64,1.1) forwards;
+  animation-delay: 500ms;
+  opacity: 0;
+}
+
+
+.projelerim{
+  animation:HayatimdanBloglarAnim 2s cubic-bezier(.2,.7,.64,1.1) forwards;
+  animation-delay: 500ms;
+  opacity: 0;
+}
+
+.login-form .ant-input-affix-wrapper{
+  padding-left: 3px!important;
+}
+.login-form .ant-btn, .admin-genel .ant-btn{
+  background-color: #585858;
+  color:white;
+}
+.login-form .ant-btn:hover , .admin-genel .ant-btn:hover{
+  background-color: #585858!important;
+  color:white!important;
+  border: none;
+}
+ .admin-genel-top .ant-btn{
+  background-color: #181D19;
+  color:white;
+}
+.admin-genel-top .ant-btn:hover{
+  background-color: #181D19!important;
+  color:white!important;
+  border: none;
+}
+@keyframes highlightAnimation {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 110%;
+    opacity: 1;
+  }
+}
+
+@keyframes SlideLeftAnim {
+  from {
+    opacity:0;
+    transform: translateX(-42px);
+  }
+  to {
+    opacity:1;
+    transform: translateX(0px);
+  }
+}
+@keyframes HayatimdanBloglarAnim {
+  from {
+    opacity:0;
+    
+  }
+  to {
+    opacity:1;
+    
+  }
+}
+@keyframes HrAnim {
+  from {
+    height: 0px;
+    transform: translateX(-42px);
+  }
+  to {
+    height: 52px;
+    transform: translateX(0px);
+  }
+}
+@keyframes headerScaleHeightAnim {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 232px;
+  }
+}
+@keyframes headerScaleHeightAnim2 {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 128px;
+  }
+}
+@keyframes headerScaleHeightAnim3 {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 150px;
+  }
+}
+@keyframes ProfilePhotoScaleHeightAnim {
+  from {
+    width: 0px;
+    height: 0px;
+  }
+  to {
+    width: 128px;
+    height: 128px;
+  }
+}
+@keyframes SocialPhotoScaleHeightAnim {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@media only screen and (max-width:768px)  {
+  .logolar{
+    width: 19px;
+  }
+  
+  header{
+    animation:headerScaleHeightAnim2 2s cubic-bezier(.2,.7,.64,1.1) forwards;
+    
+  }
+
+}
+
+@media only screen and (max-width:1024px)  {
+  .logolar{
+    width: 24px;
+  }
+  
+  
+}
+@font-face {
+  font-family: 'Melodrama-Variable';
+  src: url('../public/fonts/Melodrama-Variable.woff2') format('woff2'),
+       url('../public/fonts/Melodrama-Variable.woff') format('woff'),
+       url('../public/fonts/Melodrama-Variable.ttf') format('truetype');
+       font-weight: 300 700;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Melodrama-Light';
+  src: url('../public/fonts/Melodrama-Light.woff2') format('woff2'),
+       url('../public/fonts/Melodrama-Light.woff') format('woff'),
+       url('../public/fonts/Melodrama-Light.ttf') format('truetype');
+       font-weight: 300;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Melodrama-Regular';
+  src: url('../public/fonts/Melodrama-Regular.woff2') format('woff2'),
+       url('../public/fonts/Melodrama-Regular.woff') format('woff'),
+       url('../public/fonts/Melodrama-Regular.ttf') format('truetype');
+       font-weight: 400;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Melodrama-Medium';
+  src: url('../public/fonts/Melodrama-Medium.woff2') format('woff2'),
+       url('../public/fonts/Melodrama-Medium.woff') format('woff'),
+       url('../public/fonts/Melodrama-Medium.ttf') format('truetype');
+       font-weight: 500;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Melodrama-Semibold';
+  src: url('../public/fonts/Melodrama-Semibold.woff2') format('woff2'),
+       url('../public/fonts/Melodrama-Semibold.woff') format('woff'),
+       url('../public/fonts/Melodrama-Semibold.ttf') format('truetype');
+       font-weight: 600;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Melodrama-Bold';
+  src: url('../public/fonts/Melodrama-Bold.woff2') format('woff2'),
+       url('../public/fonts/Melodrama-Bold.woff') format('woff'),
+       url('../public/fonts/Melodrama-Bold.ttf') format('truetype');
+       font-weight: 700;
+       font-display: swap;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'ClashDisplay-Variable';
+  src: url('../public/fonts/ClashDisplay-Variable.woff2') format('woff2'),
+       url('../public/fonts/ClashDisplay-Variable.woff') format('woff'),
+       url('../public/fonts/ClashDisplay-Variable.ttf') format('truetype');
+       font-weight: 200 700;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'ClashDisplay-Extralight';
+  src: url('../public/fonts/ClashDisplay-Extralight.woff2') format('woff2'),
+       url('../public/fonts/ClashDisplay-Extralight.woff') format('woff'),
+       url('../public/fonts/ClashDisplay-Extralight.ttf') format('truetype');
+       font-weight: 200;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'ClashDisplay-Light';
+  src: url('../public/fonts/ClashDisplay-Light.woff2') format('woff2'),
+       url('../public/fonts/ClashDisplay-Light.woff') format('woff'),
+       url('../public/fonts/ClashDisplay-Light.ttf') format('truetype');
+       font-weight: 300;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'ClashDisplay-Regular';
+  src: url('../public/fonts/ClashDisplay-Regular.woff2') format('woff2'),
+       url('../public/fonts/ClashDisplay-Regular.woff') format('woff'),
+       url('../public/fonts/ClashDisplay-Regular.ttf') format('truetype');
+       font-weight: 400;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'ClashDisplay-Medium';
+  src: url('../public/fonts/ClashDisplay-Medium.woff2') format('woff2'),
+       url('../public/fonts/ClashDisplay-Medium.woff') format('woff'),
+       url('../public/fonts/ClashDisplay-Medium.ttf') format('truetype');
+       font-weight: 500;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'ClashDisplay-Semibold';
+  src: url('../public/fonts/ClashDisplay-Semibold.woff2') format('woff2'),
+       url('../public/fonts/ClashDisplay-Semibold.woff') format('woff'),
+       url('../public/fonts/ClashDisplay-Semibold.ttf') format('truetype');
+       font-weight: 600;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'ClashDisplay-Bold';
+  src: url('../public/fonts/ClashDisplay-Bold.woff2') format('woff2'),
+       url('../public/fonts/ClashDisplay-Bold.woff') format('woff'),
+       url('../public/fonts/ClashDisplay-Bold.ttf') format('truetype');
+       font-weight: 700;
+       font-display: swap;
+       font-style: normal;
+}
+@font-face {
+  font-family: 'Inter-Light';
+  src: url('../public/fonts/Inter-Light.ttf') format('ttf');
+       font-weight: 300;
+       font-display: swap;
+       font-style: normal;
+}
+@font-face {
+  font-family: 'Inter-Medium';
+  src: url('../public/fonts/Inter-Medium.ttf') format('ttf');
+       font-weight: 500;
+       font-display: swap;
+       font-style: normal;
+}
+@font-face {
+  font-family: 'Inter-SemiBold';
+  src: url('../public/fonts/Inter-SemiBold.ttf') format('ttf');
+       font-weight: 600;
+       font-display: swap;
+       font-style: normal;
+}
+
+
